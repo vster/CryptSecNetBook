@@ -1,0 +1,30 @@
+const u32bit KL = 8; 
+const u32bit BS = 8;
+const u32bit MAXT = 32;
+
+/*
+template<typename T>
+T Permute( T in, const byte KeyPermute[] );
+void SplitLR ( u32bit &L, u32bit &R, const u64bit in );
+void MergeLR ( u64bit &out, u32bit L, u32bit R );
+void ExpandPermute ( u64bit &out, const u32bit in );
+void ParDropPermute ( u64bit &out, const u64bit in );
+void CompressPermute ( u64bit &out, const u64bit in );
+void SplitKeyCD ( u32bit &C, u32bit &D, const u64bit in );
+void MergeKeyCD ( u64bit &out, u32bit C, u32bit D );
+void ShiftLeft ( u32bit &x, int rot );
+*/
+
+void KeyGen ( const byte key[8] );
+
+/*
+void SplitForSbox ( byte Sin[8], const u64bit x );
+void SubstSbox ( byte Sout[8], byte Sin[8] );
+void MergeSemiBytes ( u32bit &out, byte sb[] );
+void SwapLR ( u32bit &L, u32bit &R );
+u32bit Function( u32bit &R, const u64bit Key );
+void Mixer ( u32bit &L, u32bit &R, u64bit Key );
+*/
+
+void EncryptDES ( const byte in[8], byte out[8] );
+void DecryptDES ( const byte in[8], byte out[8] );
