@@ -4,7 +4,7 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-    nod.cpp
+    p051.cpp
 
 INCLUDEPATH += \
     ../../../WinNTL-9_8_1/include
