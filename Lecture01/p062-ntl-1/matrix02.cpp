@@ -8,6 +8,8 @@ using namespace NTL;
 
 const int MS = 3;
 
+//
+
 int main()
 {
 	int iA[MS][MS] = {	{5,2,1},
