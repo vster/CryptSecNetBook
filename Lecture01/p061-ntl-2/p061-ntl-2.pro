@@ -7,7 +7,9 @@ SOURCES += \
     matrix02.cpp
 
 INCLUDEPATH += \
-    ../../../WinNTL-9_8_1/include
+    /usr/local/include
 
 LIBS += \
-    -L../../../WinNTL-9_8_1/lib -lntl
+    -L/usr/local/lib -lntl \
+    -lgmp
+
