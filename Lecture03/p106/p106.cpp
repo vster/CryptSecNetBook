@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string.h>
 #include <NTL/matrix.h>
 #include <NTL/mat_lzz_p.h>
 

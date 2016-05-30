@@ -1,5 +1,5 @@
 #include <iostream>
-#include <NTL/zz.h>
+#include <NTL/ZZ.h>
 #include <NTL/lzz_p.h>
 #include <NTL/matrix.h>
 #include <NTL/mat_lzz_p.h>
