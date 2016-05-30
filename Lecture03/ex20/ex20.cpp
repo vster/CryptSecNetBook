@@ -1,5 +1,6 @@
 #include <iostream>
-#include <NTL/zz.h>
+#include <string.h>
+#include <NTL/ZZ.h>
 
 using namespace std;
 using namespace NTL;
