@@ -53,7 +53,7 @@ void gen_G_mult ( ulong Gmult[], ulong &ord, ulong &n )
 }
 
 
-ulong main()
+int main()
 {
 	ulong H[P][P];
 	ulong Gmult[P];
