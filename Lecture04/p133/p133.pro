@@ -6,9 +6,5 @@ CONFIG -= qt
 SOURCES += \
     p133.cpp
 
-INCLUDEPATH += \
-    /usr/local/include
-
 LIBS += \
-    -L/usr/local/lib -lntl \
-    -lgmp
+    -lntl -lgmp

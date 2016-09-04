@@ -7,5 +7,4 @@ SOURCES += \
     p131.cpp
 
 LIBS += \
-    -L/usr/local/lib -lntl \
-    -lgmp
+    -lntl -lgmp
