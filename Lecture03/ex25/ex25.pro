@@ -6,8 +6,5 @@ CONFIG -= qt
 SOURCES += \
     ex25.cpp
 
-INCLUDEPATH += \
-    /usr/local/include
-
 LIBS += \
-    -lntl -lgmp
+    -L/usr/local/lib -lntl -lgmp

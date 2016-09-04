@@ -1,10 +1,10 @@
 TEMPLATE = app
-CONFIG += console
+CONFIG += console c++11
 CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-    p131.cpp
+    p135.cpp
 
 LIBS += \
     -L/usr/local/lib -lntl -lgmp

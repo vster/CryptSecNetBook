@@ -7,4 +7,4 @@ SOURCES += \
     p133-1.cpp
 
 LIBS += \
-    -lntl -lgmp
+    -L/usr/local/lib -lntl -lgmp

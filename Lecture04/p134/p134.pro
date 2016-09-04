@@ -7,4 +7,4 @@ SOURCES += \
     p134.cpp
 
 LIBS += \
-    -lntl -lgmp
+    -L/usr/local/lib -lntl -lgmp
