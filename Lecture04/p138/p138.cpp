@@ -23,7 +23,7 @@ void gf2x_output_be ( GF2X x, long len )
 	cout << "]";
 }
 
-void GF2XFromZZ( GF2X &x, ZZ &n )
+void GF2XFromZZ( GF2X &x, ZZ n )
 {
 	const long MAXB = 10;
 	byte buf[MAXB];
