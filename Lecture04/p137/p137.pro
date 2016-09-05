@@ -3,5 +3,8 @@ CONFIG += console
 CONFIG -= app_bundle
 CONFIG -= qt
 
-SOURCES += main.cpp
+SOURCES += \
+    p137.cpp
 
+LIBS += \
+    -L/usr/local/lib -lntl -lgmp
