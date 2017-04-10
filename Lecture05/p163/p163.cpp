@@ -1,10 +1,11 @@
 #include <iostream>
+#include <stdint.h>
 using namespace std;
 
 typedef unsigned char byte;
 typedef unsigned short u16bit;
 typedef unsigned int u32bit;
-typedef unsigned __int64 u64bit;
+typedef uint64_t u64bit;
 
 typedef signed int s32bit;
 
