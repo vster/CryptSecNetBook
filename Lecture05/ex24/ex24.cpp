@@ -27,7 +27,7 @@ void swap ( T &x )
 
 int main()
 {
-	u32bit a, a1, a2;
+    u32bit a;
 
 	a = 0x59841f93;
 
