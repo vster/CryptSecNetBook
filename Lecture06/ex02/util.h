@@ -1,10 +1,13 @@
+#include <stdint.h>
 
 typedef unsigned char byte;
 typedef unsigned short u16bit;
 typedef unsigned int u32bit;
-typedef unsigned __int64 u64bit;
+typedef uint64_t u64bit;
 
 typedef signed int s32bit;
+
+using namespace std;
 
 /*************************************************
 * Rotation Functions                             *
@@ -44,10 +47,10 @@ inline u64bit make_u64bit(byte input0, byte input1, byte input2, byte input3,
 * Memory Manipulation Functions                  *
 *************************************************/
 template<typename T> inline void copy_mem(T* out, const T* in, u32bit n)
-   { std::memcpy(out, in, sizeof(T)*n); }
+   { memcpy(out, in, sizeof(T)*n); }
 
 template<typename T> inline void clear_mem(T* ptr, u32bit n)
-   { std::memset(ptr, 0, sizeof(T)*n); }
+   { memset(ptr, 0, sizeof(T)*n); }
 
 void xor_buf(byte[], const byte[], u32bit);
 void xor_buf(byte[], const byte[], const byte[], u32bit);
@@ -79,11 +82,11 @@ std::string to_string(u32bit);
 template<typename T>
 void output_bin ( T x )
 {
-	int len = 8 * sizeof ( T );
-	for ( int j = len-1; j >= 0; j-- )
-	{
-		cout << ((x >> j) & 1 );
-		if ( j%8 == 0 )
-			cout << " ";
-	}
+    int len = 8 * sizeof ( T );
+    for ( int j = len-1; j >= 0; j-- )
+    {
+            std::cout << ((x >> j) & 1 );
+            if ( j%8 == 0 )
+                cout << " ";
+    }
 }
