@@ -1,13 +1,16 @@
 TEMPLATE = app
-CONFIG += console c++11
+CONFIG += console
 CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-    ex26.cpp \
-    util.cpp
+    des.cpp \
+    util.cpp \
+    main.cpp
 
-HEADERS +=
+HEADERS += \
+    des.h \
+    vchtest.h
 
 INCLUDEPATH += \
     ../../include
