@@ -7,6 +7,7 @@ SOURCES += \
     ex24.cpp \
     util.cpp
 
-HEADERS += \
-    util.h
+HEADERS +=
 
+INCLUDEPATH += \
+    ../../include
