@@ -4,10 +4,10 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-    p056.cpp
+    p054.cpp
 
 INCLUDEPATH += \
     ../../include
 
 LIBS += \
-    -L../../../WinNTL-9_8_1/lib -lntl
+    -L../../lib -lntl
