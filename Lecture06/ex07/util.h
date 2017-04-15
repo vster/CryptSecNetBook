@@ -1,14 +1,14 @@
 #include <stdint.h>
+#include <iostream>
+
+using namespace std;
 
 typedef unsigned char byte;
 typedef unsigned short u16bit;
 typedef unsigned int u32bit;
 typedef unsigned long long u64bit;
-// typedef uint64_t u64bit;
 
 typedef signed int s32bit;
-
-using namespace std;
 
 /*************************************************
 * Rotation Functions                             *

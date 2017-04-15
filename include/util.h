@@ -1,11 +1,12 @@
 #include <stdint.h>
+#include <iostream>
+
+using namespace std;
 
 typedef unsigned char byte;
 typedef unsigned short u16bit;
 typedef unsigned int u32bit;
-typedef uint64_t u64bit;
-
-using namespace std;
+typedef unsigned long long u64bit;
 
 typedef signed int s32bit;
 
@@ -82,11 +83,11 @@ std::string to_string(u32bit);
 template<typename T>
 void output_bin ( T x )
 {
-	int len = 8 * sizeof ( T );
-	for ( int j = len-1; j >= 0; j-- )
-	{
-		cout << ((x >> j) & 1 );
-		if ( j%8 == 0 )
-			cout << " ";
-	}
+    int len = 8 * sizeof ( T );
+    for ( int j = len-1; j >= 0; j-- )
+    {
+            std::cout << ((x >> j) & 1 );
+            if ( j%8 == 0 )
+                cout << " ";
+    }
 }

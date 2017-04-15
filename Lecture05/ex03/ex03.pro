@@ -7,6 +7,5 @@ SOURCES += \
     ex03.cpp \
     util.cpp
 
-HEADERS += \
-    util.h
-
+INCLUDEPATH += \
+    ../../include

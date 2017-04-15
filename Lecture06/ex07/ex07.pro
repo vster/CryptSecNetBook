@@ -9,6 +9,8 @@ SOURCES += \
     main.cpp
 
 HEADERS += \
-    util.h \
     des.h
+
+INCLUDEPATH += \
+    ../../include
 
