@@ -7,7 +7,7 @@ SOURCES += \
     ex38-1.cpp
 
 INCLUDEPATH += \
-    ../../../WinNTL-9_8_1/include
+    ../../include
 
 LIBS += \
-    -L../../../WinNTL-9_8_1/lib -lntl
+    -L../../lib -lntl
