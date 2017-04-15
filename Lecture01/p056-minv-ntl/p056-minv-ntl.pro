@@ -10,4 +10,4 @@ INCLUDEPATH += \
     ../../include
 
 LIBS += \
-    -L../../../WinNTL-9_8_1/lib -lntl
+    -L../../lib -lntl
