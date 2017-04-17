@@ -4,10 +4,13 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
+    gost.cpp \
     util.cpp \
     main.cpp
 
-HEADERS +=
+HEADERS += \
+    gost.h \
+    vchtest.h
 
 INCLUDEPATH += \
     ../../include
