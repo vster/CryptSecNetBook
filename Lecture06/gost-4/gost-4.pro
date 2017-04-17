@@ -1,15 +1,18 @@
 TEMPLATE = app
-CONFIG += console c++11
+CONFIG += console
 CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-    des.cpp \
+    gmodes.cpp \
+    gost.cpp \
     main2.cpp \
     util.cpp
 
 HEADERS += \
-    des.h
+    gmodes.h \
+    gost.h \
+    vchtest.h
 
 INCLUDEPATH += \
     ../../include
