@@ -7,6 +7,7 @@ SOURCES += \
     p186.cpp \
     util.cpp
 
-HEADERS += \
-    util.h
+HEADERS +=
 
+INCLUDEPATH += \
+    ../../include
