@@ -1,11 +1,11 @@
 TEMPLATE = app
-CONFIG += console c++11
+CONFIG += console
 CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-    p188.cpp \
-    util.cpp
+    util.cpp \
+    main.cpp
 
 HEADERS +=
 
