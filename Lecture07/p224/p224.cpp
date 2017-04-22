@@ -146,7 +146,8 @@ byte SubsOneByte ( byte in )
 
 	// cout << hex << int ( a ) << endl;
 
-	GF2X ax = GF2XFromZZ( conv<ZZ>( a ) );
+    ZZ za = conv<ZZ>( a );
+    GF2X ax = GF2XFromZZ( za );
 	GF2E axe = conv<GF2E>( ax );
 
 	// cout << axe << endl;
@@ -199,7 +200,8 @@ byte InvSubsOneByte ( byte in )
 	long d = in;
 
 	GF2X dx;
-	dx = GF2XFromZZ( conv<ZZ>( d ) );
+    ZZ zd = conv<ZZ>( d );
+    dx = GF2XFromZZ( zd );
 
 	GF2E dxe	= conv<GF2E>( dx );
 
