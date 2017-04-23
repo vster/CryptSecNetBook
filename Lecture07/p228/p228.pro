@@ -8,9 +8,9 @@ SOURCES += \
     util.cpp
 
 INCLUDEPATH += \
-    ../../include
+    ../../../include ../../include
 
 LIBS += \
-    -L../../lib -lntl
+    -L../../../lib -lntl
 
 HEADERS +=

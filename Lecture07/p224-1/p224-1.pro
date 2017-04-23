@@ -7,7 +7,7 @@ SOURCES += \
     p224-1.cpp
 
 INCLUDEPATH += \
-    ../../include
+    ../../../include
 
 LIBS += \
-    -L../../lib -lntl
+    -L../../../lib -lntl
