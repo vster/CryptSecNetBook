@@ -6,11 +6,12 @@ CONFIG -= qt
 SOURCES += \
     des.cpp \
     util.cpp \
-    main.cpp
+    des-main.cpp
 
 HEADERS += \
     des.h \
-    vchtest.h
+    vchtest.h \
+    ../../include/util.h
 
 INCLUDEPATH += \
     ../../include

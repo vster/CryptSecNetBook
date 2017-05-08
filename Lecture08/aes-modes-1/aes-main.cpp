@@ -1,6 +1,6 @@
 #include <iostream>
 #include <iomanip>
-#include <string>
+#include <cstring>
 // #include "util.h"
 // #include "aes.h"
 #include "amodes.h"
