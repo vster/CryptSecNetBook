@@ -64,7 +64,8 @@ int main()
 
 	for ( long i = 0, a = 1; i < 14; i++)
 	{
-		GF2X ax = GF2XFromZZ( conv<ZZ>( a ) );
+        ZZ za = conv<ZZ>( a );
+        GF2X ax = GF2XFromZZ( za );
 		GF2E axe = conv<GF2E>( ax );
 		
 		ax = conv<GF2X>( axe );
