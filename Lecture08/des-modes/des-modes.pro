@@ -10,8 +10,7 @@ SOURCES += \
 
 HEADERS += \
     des.h \
-    vchtest.h \
-    ../../include/util.h
+    vchtest.h
 
 INCLUDEPATH += \
     ../../include
