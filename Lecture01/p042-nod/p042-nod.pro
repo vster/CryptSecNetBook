@@ -7,7 +7,7 @@ SOURCES += \
     nod.cpp
 
 INCLUDEPATH += \
-    ../../include
+    ../../../include
 
 LIBS += \
-    -L../../lib -lntl
+    -L../../../lib -lntl
