@@ -7,7 +7,7 @@ SOURCES += \
     ex18.cpp
 
 INCLUDEPATH += \
-    /usr/local/include
+    ../../../include
 
 LIBS += \
-    -L/usr/local/lib -lntl
+    -L../../../lib -lntl
