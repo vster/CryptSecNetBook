@@ -1,4 +1,4 @@
-#include <string>
+#include <stdint.h>
 #include <iostream>
 
 using namespace std;
@@ -81,13 +81,13 @@ std::string to_string(u32bit);
 * Output in binary format Functions              *
 *************************************************/
 template<typename T>
-void output_bin ( T x, int len )
+void output_bin ( T x )
 {
-	// int len = 8 * sizeof ( T );
-	for ( int j = len-1; j >= 0; j-- )
-	{
-        cout << ((x >> j) & 1 );
-        if ( j%8 == 0 )
-            cout << " ";
-	}
+    int len = 8 * sizeof ( T );
+    for ( int j = len-1; j >= 0; j-- )
+    {
+            std::cout << ((x >> j) & 1 );
+            if ( j%8 == 0 )
+                cout << " ";
+    }
 }

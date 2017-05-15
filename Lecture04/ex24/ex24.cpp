@@ -62,7 +62,8 @@ int main()
 	long i, j;
 	for ( i = 0; i < 16; i++)
 	{
-		GF2XFromZZ( ax, conv<ZZ>(i) );
+        ZZ ii=conv<ZZ>(i);
+        GF2XFromZZ( ax, ii );
 		arr[i] = conv<GF2E>(ax);
 	}
 	

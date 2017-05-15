@@ -7,7 +7,8 @@ SOURCES += \
     matrix01.cpp
 
 INCLUDEPATH += \
-    ../../include
+    ../../../include
 
 LIBS += \
-    -L../../lib -lntl
+    -L../../../lib -lntl
+

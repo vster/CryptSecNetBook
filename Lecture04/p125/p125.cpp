@@ -22,7 +22,7 @@ ulong power( ulong x, ulong n )
 	return p;
 }
 
-ulong main()
+int main()
 {
 	ulong resarr[P][P];
 	ulong i;

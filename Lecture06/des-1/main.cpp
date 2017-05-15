@@ -3,6 +3,7 @@
 #include <string>
 #include "util.h"
 #include "des.h"
+#include "vchtest.h"
 
 using namespace std;
 // const int MAXW = 64;

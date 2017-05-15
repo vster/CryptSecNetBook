@@ -7,14 +7,16 @@ typedef unsigned char byte;
 using namespace std;
 using namespace NTL;
 
-void gf2x_output_be ( GF2X x, long len )
+void gf2x_output_be ( GF2X x )
 {
 	long i;
 	long n = NumBits(x);
 
-	cout << "[";
+    // long len=strlen(x);
 
-	for ( i = 0; i < len-n; i++)
+    cout << "[";
+
+    for ( i = 0; i < 8-n; i++)
 		cout << "0";
 
 	for ( i = n-1; i >= 0; i--)

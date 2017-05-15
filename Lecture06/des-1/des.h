@@ -1,3 +1,7 @@
+const u32bit KL = 8;
+const u32bit BS = 8;
+const u32bit MAXT = 32;
+
 template<typename T>
 T Permute( T in, const byte KeyPermute[] );
 void SplitLR ( u32bit &L, u32bit &R, const u64bit in );

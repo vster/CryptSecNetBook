@@ -212,15 +212,17 @@ void MixColumns ( byte State[4][4] )
 	for ( int  i = 0; i < 4; i++ )
 		for ( int j = 0; j < 4; j++)
 		{
-			GF2X tx = GF2XFromZZ ( conv<ZZ>( State[i][j]) );
-			A[i][j] = conv<GF2E>( tx );
+            ZZ zs = conv<ZZ>( State[i][j]);
+            GF2X tx = GF2XFromZZ ( zs );
+            A[i][j] = conv<GF2E>( tx );
 		}
 	
 	C.SetDims(4,4);
 	for ( int  i = 0; i < 4; i++ )
 		for ( int j = 0; j < 4; j++)
 		{
-			GF2X tx = GF2XFromZZ ( conv<ZZ>(C0[i][j]) );
+            ZZ zc0 = conv<ZZ>(C0[i][j]);
+            GF2X tx = GF2XFromZZ ( zc0 );
 			C[i][j] = conv<GF2E>( tx );
 		}
 
@@ -250,7 +252,8 @@ void InvMixColumns ( byte State[4][4] )
 	for ( int  i = 0; i < 4; i++ )
 		for ( int j = 0; j < 4; j++)
 		{
-			GF2X tx = GF2XFromZZ ( conv<ZZ>( State[i][j]) );
+            ZZ zs = conv<ZZ>( State[i][j]);
+            GF2X tx = GF2XFromZZ ( zs );
 			A[i][j] = conv<GF2E>( tx );
 		}
 	
@@ -258,7 +261,8 @@ void InvMixColumns ( byte State[4][4] )
 	for ( int  i = 0; i < 4; i++ )
 		for ( int j = 0; j < 4; j++)
 		{
-			GF2X tx = GF2XFromZZ ( conv<ZZ>(InvC0[i][j]) );
+            ZZ zc0 = conv<ZZ>(C0[i][j]);
+            GF2X tx = GF2XFromZZ ( zc0 );
 			InvC[i][j] = conv<GF2E>( tx );
 		}
 

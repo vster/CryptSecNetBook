@@ -164,7 +164,8 @@ void MixColumns ( byte out[4][4], byte in[4][4] )
 	for ( int  i = 0; i < 4; i++ )
 		for ( int j = 0; j < 4; j++)
 		{
-			GF2X tx = GF2XFromZZ ( conv<ZZ>(in[i][j]) );
+            ZZ zin = conv<ZZ>(in[i][j]);
+            GF2X tx = GF2XFromZZ ( zin );
 			A[i][j] = conv<GF2E>( tx );
 		}
 	// cout << endl << A << endl;
@@ -173,7 +174,8 @@ void MixColumns ( byte out[4][4], byte in[4][4] )
 	for ( int  i = 0; i < 4; i++ )
 		for ( int j = 0; j < 4; j++)
 		{
-			GF2X tx = GF2XFromZZ ( conv<ZZ>(C0[i][j]) );
+            ZZ zc0 = conv<ZZ>(C0[i][j]);
+            GF2X tx = GF2XFromZZ ( zc0 );
 			C[i][j] = conv<GF2E>( tx );
 		}
 	// cout << endl << C << endl;
@@ -206,7 +208,8 @@ void InvMixColumns ( byte out[4][4], byte in[4][4] )
 	for ( int  i = 0; i < 4; i++ )
 		for ( int j = 0; j < 4; j++)
 		{
-			GF2X tx = GF2XFromZZ ( conv<ZZ>(in[i][j]) );
+            ZZ zin = conv<ZZ>(in[i][j]);
+            GF2X tx = GF2XFromZZ ( zin  );
 			A[i][j] = conv<GF2E>( tx );
 		}
 	// cout << endl << A << endl;
@@ -215,7 +218,8 @@ void InvMixColumns ( byte out[4][4], byte in[4][4] )
 	for ( int  i = 0; i < 4; i++ )
 		for ( int j = 0; j < 4; j++)
 		{
-			GF2X tx = GF2XFromZZ ( conv<ZZ>(C0[i][j]) );
+            ZZ zc0 = conv<ZZ>(C0[i][j]) ;
+            GF2X tx = GF2XFromZZ ( zc0 );
 			C[i][j] = conv<GF2E>( tx );
 		}
 	// cout << endl << C << endl;

@@ -22,4 +22,6 @@ int main()
 
 	int bnum = bitlen / BSIZE;
 
+    cout << bnum;
+    cout << endl;
 }
