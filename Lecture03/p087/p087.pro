@@ -7,8 +7,7 @@ SOURCES += \
     p087-afin-ca.cpp
 
 INCLUDEPATH += \
-    /usr/local/include
+    ../../../include
 
 LIBS += \
-    -L/usr/local/lib -lntl \
-    -lgmp
+    -L../../../lib -lntl
