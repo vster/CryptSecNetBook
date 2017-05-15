@@ -6,5 +6,8 @@ CONFIG -= qt
 SOURCES += \
     p139.cpp
 
+INCLUDEPATH += \
+    ../../../include
+
 LIBS += \
-    -L/usr/local/lib -lntl -lgmp
+    -L../../../lib -lntl

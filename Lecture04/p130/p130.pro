@@ -7,8 +7,7 @@ SOURCES += \
     p130.cpp
 
 INCLUDEPATH += \
-    /usr/local/include
+    ../../../include
 
 LIBS += \
-    -L/usr/local/lib -lntl \
-    -lgmp
+    -L../../../lib -lntl
