@@ -1,8 +1,10 @@
 #include <iostream>
 #include <stdint.h>
+#define byte unsigned char
+
 using namespace std;
 
-typedef unsigned char byte;
+// typedef unsigned char byte;
 typedef unsigned short u16bit;
 typedef unsigned int u32bit;
 typedef uint64_t u64bit;
