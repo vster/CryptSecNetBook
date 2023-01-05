@@ -2,6 +2,8 @@
 #include <fstream>
 #include <strstream>
 #include <iomanip>
+#include <string.h>
+#include <stdio.h>
 #include "util.h"
 #include "gost.h"
 #include "gmodes.h"
@@ -20,13 +22,13 @@ void BEFromInt(byte buf[], int num)
 	}
 }
 
-void FnameFromNum (char filename[], int num)		
+void FnameFromNum (char filename[], int num)
 {
 	char fext[4];
 	char fname[MAXFN] = "test."; 
-	sprintf_s(fext,"%03x",num);
-	strcat_s(fname,fext);
-	strcpy_s(filename, 20, fname);
+    sprintf(fext,"%03x",num);
+    strcat(fname,fext);
+    strcpy(filename, fname);
 }
 
 // Make one test file

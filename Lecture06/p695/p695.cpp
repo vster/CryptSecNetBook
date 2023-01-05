@@ -101,7 +101,7 @@ void SplitForSbox ( byte Sin[], const byte x )
 {
 	byte temp = x;	
 	
-	output_bin ( x, 8 );
+    output_bin ( x );
 	cout << endl;
 
 	for ( int i = 1; i >= 0; i-- )
@@ -112,7 +112,7 @@ void SplitForSbox ( byte Sin[], const byte x )
 	
 	for ( int i = 0; i < 2; i++ )
 	{
-		output_bin ( Sin[i], 4 );
+        output_bin ( Sin[i] );
 		cout << " ";
 	}
 	cout << endl;
@@ -188,17 +188,17 @@ byte Function( byte &R, const byte Key )
 	ExpandPermute ( T1, R );
 
 	cout << "\nExpansion permute\n";
-	output_bin ( T1, 8 );
+    output_bin ( T1 );
 	cout << endl;
 
 	cout << "\nKey = \n";
-	output_bin ( Key, 8 );
+    output_bin ( Key );
 	cout << endl;
 	
 	T1 ^= Key;
 
 	cout << "\nXOR with key\n";
-	output_bin ( T1, 8 );
+    output_bin ( T1 );
 	cout << endl;
 
 	byte Sin[2], Sout[2];
@@ -209,14 +209,14 @@ byte Function( byte &R, const byte Key )
 	MergeAfterSbox( T2, Sout );
 
 	cout << "\nAfter S-box\n";
-	output_bin ( T2, 4 );
+    output_bin ( T2 );
 	cout << endl;
 	
 	byte T3;
-	T3 = PermuteSB( T2, PboxTab );
+    T3 = PermuteSB( T2, PboxTab );
 
 	cout << "\After 4-bit P-box\n";
-	output_bin ( T3, 4 );
+    output_bin ( T3 );
 	cout << endl;	
 	
 	return T3;
@@ -230,9 +230,9 @@ void Mixer ( byte &L, byte &R, byte Key )
 	// Складываем результат F-функции на левую часть
 	L ^= mask;
 
-	output_bin ( L, 4 );
+    output_bin ( L );
 	cout << " ";
-	output_bin ( R, 4 );
+    output_bin ( R );
 	cout << endl;
 }
 
@@ -246,22 +246,22 @@ void EncryptSDES ( byte &TC, byte TO, u16bit Key )
 	// for ( int i = 0; i < 2; i++ )
 	//	RoundKey[i] = 0;
 	
-	KeyGen ( u16bit Key );
+    // KeyGen ( u16bit Key );
 
 	byte T1;
 	T1 = Permute ( TO, IPTab );
 
 	cout << "\nInitial permute\n";
-	output_bin ( T1, 8 );
+    output_bin ( T1 );
 	cout << endl;
 
 	byte L, R;
 	SplitLR ( L, R, T1);  
 
 	cout << "\nSplit to L and R\n";
-	output_bin ( L, 4 );
+    output_bin ( L );
 	cout << " ";
-	output_bin ( R, 4 );
+    output_bin ( R );
 	cout << endl;
 
 	for ( int i = 0; i < 2; i++ )
@@ -270,29 +270,29 @@ void EncryptSDES ( byte &TC, byte TO, u16bit Key )
 
 		Mixer ( L, R, RoundKey[i] );
 
-		output_bin ( L, 4 );
+        output_bin ( L );
 		cout << " ";
-		output_bin ( R, 4 );
+        output_bin ( R );
 		cout << endl;
 
 		if ( i != 1 )
 			SwapLR ( L, R );
 
-		output_bin ( L, 4 );
+        output_bin ( L );
 		cout << " ";
-		output_bin ( R, 4 );
+        output_bin ( R );
 		cout << endl;
 	}
 	
 	byte T2;
 	MergeLR ( T2, L, R );
 	
-	output_bin ( T2, 8 );
+    output_bin ( T2 );
 		cout << endl;
 
 	TC = Permute ( T2, FPTab );
 	
-	output_bin ( TC, 8 );
+    output_bin ( TC );
 		cout << endl;
 }
 
@@ -309,16 +309,16 @@ void DecryptSDES ( byte &TD, byte TC, u16bit Key )
 	T1 = Permute ( TC, IPTab );
 
 	cout << "\nInitial permute\n";
-	output_bin ( T1, 8 );
+    output_bin ( T1 );
 	cout << endl;
 
 	byte L, R;
 	SplitLR ( L, R, T1);  
 
 	cout << "\nSplit to L and R\n";
-	output_bin ( L, 4 );
+    output_bin ( L );
 	cout << " ";
-	output_bin ( R, 4 );
+    output_bin ( R );
 	cout << endl;
 
 	for ( int i = 0; i < 2; i++ )
@@ -328,29 +328,29 @@ void DecryptSDES ( byte &TD, byte TC, u16bit Key )
 
 		Mixer ( L, R, RoundKey[1-i] );
 
-		output_bin ( L, 4 );
+        output_bin ( L );
 		cout << " ";
-		output_bin ( R, 4 );
+        output_bin ( R );
 		cout << endl;
 
 		if ( i != 1 )
 			SwapLR ( L, R );
 
-		output_bin ( L, 4 );
+        output_bin ( L );
 		cout << " ";
-		output_bin ( R, 4 );
+        output_bin ( R );
 		cout << endl;
 	}
 	
 	byte T2;
 	MergeLR ( T2, L, R );
 	
-	output_bin ( T2, 8 );
+    output_bin ( T2 );
 		cout << endl;
 
 	TD = Permute ( T2, FPTab );
 	
-	output_bin ( TD, 8 );
+    output_bin ( TD );
 		cout << endl;
 }
 
@@ -364,19 +364,19 @@ int main()
 	u16bit Key = 0x02e6;
 
 	cout << "Open data\n";
-	output_bin ( OpenData, 8 );
+    output_bin ( OpenData );
 	cout << endl;
 
 	EncryptSDES ( EncData, OpenData, Key );
 
 	cout << "\nEncrypted data\n";
-	output_bin ( EncData, 8 );
+    output_bin ( EncData );
 	cout << endl;
 
 	DecryptSDES ( DecData, EncData, Key );
 
 	cout << "\nDecrypted data\n";
-	output_bin ( DecData, 8 );
+    output_bin ( DecData );
 	cout << endl;
 
 
