@@ -5,3 +5,9 @@ CONFIG -= qt
 
 SOURCES += \
     ex16.cpp
+
+INCLUDEPATH += \
+    ../../../include
+
+LIBS += \
+    -L../../../lib -lntl
